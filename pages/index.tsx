@@ -9,9 +9,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     const loadStuff = async () => {
       const stuff = await fetch("/api/hello").then((res) => res.json());
-      setStuff(
-        (stuff.name as string).split("").reverse().join("") + "AAAAAAAAAAAAA"
-      );
+      setStuff((stuff.name as string).split("").reverse().join("") + "BBBBBB");
     };
     loadStuff();
   }, []);
